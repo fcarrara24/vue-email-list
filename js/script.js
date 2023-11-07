@@ -12,17 +12,16 @@ const obj = {
     methods: {
         createArray() {
             for (let index = 0; index < 10; index++) {
-                this.mailArray.push(this.getEmail())
+                this.getEmail();
             }
-
         },
         getEmail() {
             axios
                 .get(`${this.APIwebsite}${this.section}`)
                 .then(
                     (res) => {
-                        console.log(res.data.response)
-                        return res
+                        //pushing element into the array as a promise inside of the function
+                        this.mailArray.push(res.data.response);
                     }
                 )
             //  

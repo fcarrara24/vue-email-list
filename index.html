@@ -14,8 +14,11 @@
     <div id="app">
         <h1>SUGGERIMENTI EMAIL</h1>
 
-        <button @click="createArray()">Invia</button>
+        <button @click.once="createArray()">Invia</button>
 
+        <ul>
+            <li v-for="email in mailArray">{{email}}</li>
+        </ul>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/script.js"></script>
