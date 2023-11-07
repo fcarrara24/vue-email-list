@@ -16,8 +16,10 @@
 
         <button @click.once="createArray()">Invia</button>
 
-        <ul>
-            <li v-for="email in mailArray">{{email}}</li>
+        <ul v-if="arrayLength >= 10">
+            <li v-for="email in mailArray">
+                {{email}}
+            </li>
         </ul>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
